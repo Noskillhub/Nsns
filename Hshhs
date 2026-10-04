@@ -1,0 +1,987 @@
+local _S = (function()
+  local _k = 134
+  local _a = "SA8H3DO749NQ!1T/P*FRKZV=EMY~5WC_XBL6U.+IGJ02"
+  local _lut = {}
+  for _i = 1, 44 do _lut[_a:sub(_i, _i)] = _i - 1 end
+  local _e = {"DQ", "D4", "D3D=D!D9DVDRD1D!", "3+DTDQD6D7DEDM", "3.D9DEDRDYDV3ZD1D!DVD7DLDV", "3WDRD9D*", "3KDQD!", "3KDQD!DRDMDF", "3WDRD9D*3+DTDQD6D7DE", "3KDQD!3+DTDQD6D7DE", "3FD7DMDVDED1D6", "3UD7DYDTDRD9DQDVD7DO3.DVD1DEDQDDD7", "3UD=D!3.D7DEDKDRD9D7", "3ZD1DED73*D=DR", "3*D=DR3.D7DEDKDRD9D7", "", "3.DVDQDEDV3.DFD1D1DVDRD!DD", "3+DEDRD/DQDED6", "3CD=D/DQD!D1DRDO3UD1D1DV3+DQDEDV", "3UDQDDD73XD1DRDO", "3CD7DQDO", "3CDRDVD4D1DL3CD7DQDO", "3CD=D/DQD!D1DRDO", "3PD1DED9D73PDRD7DTDO", "D3DRDMDVDM", "D/D7DTD7D7", "D*D!DRD3D7", "DMDZD1DEDO", "D4DQDV", "D/DQD9D7", "DQDLD7", "DFDQD/D/D7DE", "D*DQDVDQD!DQ", "DODQDDDDD7DE", "DYDRD9D*DQDLD7", "DYDRDYD7", "D9DTD=D4", "DZDED7D!D9DF", "3=D/D/D1", "3UD7DTD1DQDODRD!DD", "3MD4DPD7D9DV3_3F", "3+DTDQD6D7DE3*D=DR", "3LD7DLDV3YDQD4D7DT", "3GH_DOHJ3!H_DOHJHC", "H_DOHJ", "3*D=DR3MD4DPD7D9DV", "3*D=DR3KD=DVDVD1D!", "3LD7DLDV3KD=DVDVD1D!", "3LDRDVDTD7", "DMD*DRDY", "DTD7DQDKD7", "DYDTDQD6HLDQDDDQDRD!", "DED7DYDTDQD6", "D9D1D!DVDRD!D=D7", "3XDRDEDVD=DQDT3_D!DYD=DV3~DQD!DQDDD7DE", "3LD7DLDV3KD1DL", "DMDVDEDRD!DD", "3GH0H_DOHJH2H_DMHGDAH_HI8!SOSZ8!SOSF32H_DMHGH0H_DOHJH2HC", "3ZD1DTDTD7D9DVDRD1D!3.D7DEDKDRD9D7", "3ID=D7D=D73+DQDO", "3ID=D7D=D73EDQD/D7", "37DK37", "37HLDKHL37", "DOD=D7DT", "3UD7D/D1DVD7DM", "3~DQDVD9DFD/DQD*DRD!DD", "35D1DRD!3ID=D7D=D7", "3UD7D/D1DVD73PD=D!D9DVDRD1D!", "3~DQDVD9DFD/DQDOD73.DVDQDVD=DM", "3.DVDQDEDVD7DO", "3ID=D7D=D7DO", "3~DQDVD9DFD/DQDOD73*DQD/D73MDKD7DE", "3.D9DED7D7D!3*D=DR", "3.DVDQDVD=DM", "3PDEDQD/D7", "363_3ZD1DED!D7DE", "8CSMSPSRHL3YD=DK3.DRD9D*HLHIHL3=D=DVD1HLD3DQDED/", "3.DVDED7DQD/DYDED1D1D3HLAEADHL3=3ZHLD4D6DYDQDMDMD7DO", "3YD1DQDODRD!DDHUHUHU", "3EDQD/D7", "36D!D*D!D1DZD!", "3~DQDL3=D/D/D1", "3ED1D!D7", "8CSMSFAAHL3*D=D!", "8CSMS6S!HL3~D7DTD7D7", "39", "H_HU37D3", "8!S~SL8*AFS9HLDHD1D=3!HLH_DOHL3C3+H48CSMS4SJHL3LDQDEDDD7DV3!HLH_DMHLH0H_DOHL3C3+H2H48CSMSKS6HL3FDQD/DQDDD73!HLH_DOH4H_DMHL3BD7DQDYD1D!3!HLH_DMH48CSMSZSXHL3=D/D/D13!HLH_DOHLH.HLH_DOHLH_DMH48CSMSFS*HL3FD7DMD6D!D93!HLH_DMHLDCHL3UDQDDD73!HLH_DMH48CSMSZS9HL3FDRDMDV3!HLH_DMHLDMDVD=DODMH48CSMS9SSHL3.D9D1DED73!HLH_DOHLHIHLH_DO", "8!S9A9", "3M3E", "3M3P3P", "8!SYSH", "8!SWSF"}
+  local _o = {}
+  for _i = 1, #_e do
+    local _s = _e[_i]
+    local _t = ""
+    for _j = 1, #_s, 2 do
+      local _b = _lut[_s:sub(_j, _j)] * 44 + _lut[_s:sub(_j + 1, _j + 1)]
+      _t = _t .. string.char(bit32.bxor(_b, _k))
+    end
+    _o[_i] = _t
+  end
+  return _o
+end)()
+
+local _0x6279 = tonumber
+local _0xA5D8 = type
+local _0x34E8 = pairs
+local _0xCC5B = ipairs
+local _0x790A = table
+local _0xDF36 = string
+local _0x7064 = math
+local _0xA63A = pcall
+local _0x5131 = require
+local _0x1A89 = game
+local _0x2398 = workspace
+local _0xFF53 = Instance
+local _0x98E7 = Vector3
+local _0x2783 = CFrame
+local _0x9611 = Color3
+local _0xBCCF = UDim2
+local _0x9377 = Enum
+local _0xE135 = Players
+local _0x0D02 = RunService
+local _0xF425 = ReplicatedStorage
+local _0x2546 = CollectionService
+local _0xB48E = utf8
+local _0x0894 = task
+
+local _0xD893 = (_0xD893 or {})
+local _0x033E = (_0x033E or {})
+local _0x7FA2 = (_0x7FA2 or {})
+local _0x3C68 = (_0x3C68 or {})
+local _0x7218 = (_0x7218 or {})
+local _0x0926 = function ()
+  local _0x3C43 = (9 * 0)
+  for _0xC836 = (7 * 0 + 1), (6 * 1 + 2) do
+    _0x3C43 = (_0x3C43 + _0xC836)
+  end
+  local _0x996E = {(9 * 0 + 1), (4 * 0 + 2), (9 * 0 + 3), _0x3C43}
+  local _0x517F = (_S[1] .. _S[2])
+  return (_0x996E[(7 * 0 + 1)] + #_0x517F)
+end
+local _0x08E8 = function ()
+  local _0xF484 = (6 * 0)
+  for _0xFD10 = (6 * 0 + 1), (9 * 0 + 8) do
+    _0xF484 = (_0xF484 + _0xFD10)
+  end
+  local _0xE7FE = {(4 * 0 + 1), (7 * 0 + 2), (4 * 0 + 3), _0xF484}
+  local _0xD959 = (_S[1] .. _S[2])
+  return (_0xE7FE[(2 * 0 + 1)] + #_0xD959)
+end
+local _0x38DA = function ()
+  local _0xE198 = (2 * 0)
+  for _0x83C3 = (8 * 0 + 1), (9 * 0 + 8) do
+    _0xE198 = (_0xE198 + _0x83C3)
+  end
+  local _0x4823 = {(6 * 0 + 1), (3 * 0 + 2), (6 * 0 + 3), _0xE198}
+  local _0x40C5 = (_S[1] .. _S[2])
+  return (_0x4823[(3 * 0 + 1)] + #_0x40C5)
+end
+local _0x926E = function ()
+  local _0x6139 = (8 * 0)
+  for _0x750D = (2 * 0 + 1), (7 * 1 + 1) do
+    _0x6139 = (_0x6139 + _0x750D)
+  end
+  local _0x225A = {(6 * 0 + 1), (3 * 0 + 2), (4 * 0 + 3), _0x6139}
+  local _0x1C29 = (_S[1] .. _S[2])
+  return (_0x225A[(5 * 0 + 1)] + #_0x1C29)
+end
+do
+  local _0xGUARD = ((2 * 3) == 6)
+  if _0xGUARD then
+    if (_0x1A89.GameId ~= 6035872082) then
+      return
+
+    end
+    _0x0894.wait((8 * 1))
+    _0x0894.spawn(    function ()
+      _0xA63A(      function ()
+        if getgenv()._acB then
+          return
+
+        end
+        getgenv()._acB = true
+        if (_0xA5D8(hookfunction) ~= _S[3]) then
+          return
+
+        end
+        local _0xFF87 = _0x1A89:GetService(_S[4]).LocalPlayer
+        local _0xB7F7 = _0x1A89:GetService(_S[5])
+        local function _0x49A6(_0x07EB, _0x84D1, _0xE846)
+          if (not _0x07EB) then
+            return
+
+          end
+          local _0xBE39 = _0x07EB[_0x84D1]
+          if (_0xA5D8(_0xBE39) ~= _S[3]) then
+            return
+
+          end
+          _0xA63A(          function ()
+            hookfunction(_0xBE39, _0xE846)
+          end)
+        end
+        for _0x3A1F, _0x1FEF in _0xCC5B({_S[6], _S[7], _S[8], _S[9], _S[10]}) do
+          local _0xB0C0 = _0xFF87[_0x1FEF]
+          _0x49A6(_0xFF87, _0x1FEF,           function (_0x45FE, ...)
+            if ((_0x45FE == _0xFF87) and (not (checkcaller and checkcaller()))) then
+              return nil
+
+            end
+            if (_0xA5D8(_0xB0C0) == _S[3]) then
+              return _0xB0C0(_0x45FE, ...)
+
+            end
+          end)
+        end
+        do
+          local _0xB0C0 = _0xFF87.Destroy
+          _0x49A6(_0xFF87, _S[11],           function (_0x45FE, ...)
+            if ((_0x45FE == _0xFF87) and (not (checkcaller and checkcaller()))) then
+              return
+
+            end
+            if (_0xA5D8(_0xB0C0) == _S[3]) then
+              return _0xB0C0(_0x45FE, ...)
+
+            end
+          end)
+        end
+        _0xA63A(        function ()
+          local _0xED0F = _0xB7F7.Error.Connect
+          if (_0xA5D8(_0xED0F) == _S[3]) then
+            hookfunction(_0xED0F,             function ()
+              return {Disconnect =               function ()
+              end}
+            end)
+
+          end
+        end)
+      end)
+    end)
+    local _0x57C3 = _0x1A89:GetService(_S[4]).LocalPlayer
+    local _0x60FB = _0x1A89:GetService(_S[12])
+    local _0xD1B9 = _0x2398
+    local _0xD75D = _0x1A89:GetService(_S[13])
+    local _0x3E45 = _0x1A89:GetService(_S[14])
+    local _0xBE39 = _0x1A89:GetService(_S[15])
+    local _0xAFC9 = _0xD1B9.CurrentCamera
+    local _0x3429, _0x2CB3, _0x2F3A
+    _0xA63A(    function ()
+      _0x3429 = _0x5131(_0x60FB.Modules.Utility)
+    end)
+    _0xA63A(    function ()
+      _0x2CB3 = _0x5131(_0x60FB.Modules.EnumLibrary)
+    end)
+    _0xA63A(    function ()
+      _0x2F3A = _0x5131(_0x57C3.PlayerScripts.Controllers.FighterController)
+    end)
+    _0x3429 = (_0x3429 or {EncodeCFrame =     function (_0x7C7C)
+      return _S[16]
+    end})
+    _0x2CB3 = (_0x2CB3 or {ToEnum =     function ()
+      return _S[17]
+    end})
+    _0x2F3A = (_0x2F3A or {LocalFighter = nil})
+    getgenv().Config = {Enabled = true, BurstCount = (6 * 0 + 5), WeaponSlot = _S[18], AutoQueue = true}
+    getgenv().SecondRagebotConfig = {Height = (2 * 1), Radius = (6 * 0), Speed = (9 * 44 + 4), SpinSpeed = (7 * 57 + 1)}
+    local _0xBC3C, _0xD481, _0xF624 = nil, nil, nil
+    local function _0xD7F6()
+      local _0xDE89 = (_0x57C3.Character and _0x57C3.Character:FindFirstChild(_S[19]))
+      if (not _0xDE89) then
+        return
+
+      end
+      _0xBC3C = _0xDE89.CFrame
+      _0xD481 = _0xDE89.AssemblyLinearVelocity
+      _0xF624 = _0xDE89.AssemblyAngularVelocity
+    end
+    local function _0xBA3E()
+      _0xBC3C, _0xD481, _0xF624 = nil, nil, nil
+    end
+    local function _0xE99D()
+      if (not _0xBC3C) then
+        return
+
+      end
+      local _0xDE89 = (_0x57C3.Character and _0x57C3.Character:FindFirstChild(_S[19]))
+      if (not _0xDE89) then
+        return
+
+      end
+      _0xA63A(      function ()
+        _0xDE89.CFrame = _0xBC3C
+        _0xDE89.AssemblyLinearVelocity = _0xD481
+        _0xDE89.AssemblyAngularVelocity = _0xF624
+      end)
+    end
+    local function _0xCBAB(_0xA448)
+      local _0xDE89 = (_0x57C3.Character and _0x57C3.Character:FindFirstChild(_S[19]))
+      if (not _0xDE89) then
+        return
+
+      end
+      _0xA63A(      function ()
+        _0xDE89.CFrame = _0x2783.new(_0x7064.random((-1e8), 1e8), _0x7064.random((-1e8), 1e8), _0x7064.random((-1e8), 1e8))
+        _0xDE89.CFrame = _0x2783.new(_0xA448)
+        _0xDE89.AssemblyLinearVelocity = _0x98E7.new()
+        _0xDE89.AssemblyAngularVelocity = _0x98E7.new()
+      end)
+    end
+    _0xA63A(    function ()
+      _0xD75D:BindToRenderStep(_S[20], _0x9377.RenderPriority.First.Value, _0xE99D)
+    end)
+    local function _0xB262()
+      local _0x3DBE = _0x57C3.Character
+      if (not _0x3DBE) then
+        return
+
+      end
+      local _0x1955 = _0x3DBE:FindFirstChild(_S[19])
+      if (not _0x1955) then
+        return
+
+      end
+      local _0xD9F6, _0xCB49, _0xD8BB, _0x47C6 = nil, nil, nil, (8 * 62 + 4)
+      for _0x3A1F, _0x0BEB in _0xCC5B(_0x1A89:GetService(_S[4]):GetPlayers()) do
+        if (_0x0BEB ~= _0x57C3) then
+          local _0xCEA7 = _0x0BEB.Character
+          if _0xCEA7 then
+            local _0x456F = _0xCEA7:FindFirstChild(_S[19])
+            local _0x8903 = (_0xCEA7:FindFirstChild(_S[21]) or _0xCEA7:FindFirstChild(_S[22]))
+            local _0x674E = _0xCEA7:FindFirstChildOfClass(_S[23])
+            if (((_0x456F and _0x8903) and _0x674E) and (_0x674E.Health > (7 * 0))) then
+              if (not _0xCEA7:FindFirstChildWhichIsA(_S[24])) then
+                local _0x9F2C = (_0x1955.Position - _0x456F.Position).Magnitude
+                if (_0x9F2C < _0x47C6) then
+                  _0x47C6 = _0x9F2C
+                  _0xD9F6 = _0x0BEB
+                  _0xCB49 = _0x456F
+                  _0xD8BB = _0x8903
+
+                end
+
+              end
+
+            end
+
+          end
+
+        end
+      end
+      return _0xD9F6, _0xCB49, _0xD8BB
+    end
+    local _0x721E = (9 * 0 + 1)
+    local _0x4B04 = (6 * 0)
+    local _0x3941, _0x5B25, _0x162B = nil, nil, nil
+    local _0xA980 = nil
+    local _0x633D = false
+    local _0x1E76 = nil
+    local _0x177E = nil
+    local _0xBBB3 = (2 * 0)
+    local _0x7FA1 = 1.5
+    local _0x5BAB = (8 * 0)
+    local _0x40D1 = (7 * 0)
+    local _0x6F42 = false
+    local _0x5419 = (8 * 0)
+    local _0x2DC3 = 0.4
+    local _0x7A87 = (8 * 12 + 4)
+    local function _0x59EC()
+      if _0x1E76 then
+        _0xA63A(        function ()
+          _0x1E76:Disconnect()
+        end)
+        _0x1E76 = nil
+
+      end
+      if _0x177E then
+        _0xA63A(        function ()
+          _0x177E:Disconnect()
+        end)
+        _0x177E = nil
+
+      end
+      _0x633D = false
+      _0xBA3E()
+      if _0xA980 then
+        local _0x73D4 = (_0x2F3A and _0x2F3A.LocalFighter)
+        if ((_0x73D4 and _0x73D4.Entity) and _0x73D4.Entity.RootPart) then
+          _0xA63A(          function ()
+            _0x73D4.Entity.RootPart.CFrame = _0xA980
+          end)
+
+        end
+        _0xA980 = nil
+
+      end
+    end
+    local function _0xDA3B(_0x2E37)
+      if ((not _0x2E37) or (not _0x2E37.Name)) then
+        return false
+
+      end
+      local _0x3DBE = _0x2E37.Name:lower()
+      return ((((((((((((((_0x3DBE == _S[25]) or (_0x3DBE == _S[26])) or _0x3DBE:find(_S[27])) or _0x3DBE:find(_S[28])) or _0x3DBE:find(_S[29])) or _0x3DBE:find(_S[30])) or _0x3DBE:find(_S[31])) or _0x3DBE:find(_S[32])) or _0x3DBE:find(_S[33])) or _0x3DBE:find(_S[34])) or _0x3DBE:find(_S[35])) or _0x3DBE:find(_S[36])) or _0x3DBE:find(_S[37])) or _0x3DBE:find(_S[38]))
+    end
+    local function _0x13F2()
+      local _0x73D4 = (_0x2F3A and _0x2F3A.LocalFighter)
+      if (((not _0x73D4) or (not _0x73D4.Entity)) or (not _0x73D4.Entity.RootPart)) then
+        return
+
+      end
+      if (((not _0x3941) or (not _0x5B25)) or (not _0x162B)) then
+        return
+
+      end
+      local _0x8743 = _0x3941.Character
+      if ((not _0x8743) or (not _0x8743.Parent)) then
+        return
+
+      end
+      local _0x7679 = _0x8743:FindFirstChildOfClass(_S[23])
+      if ((not _0x7679) or (_0x7679.Health <= (6 * 0))) then
+        return
+
+      end
+      local _0xD2B2 = _0x8743:FindFirstChildWhichIsA(_S[24])
+      if _0xD2B2 then
+        if (_0xBBB3 == (8 * 0)) then
+          _0xBBB3 = tick()
+
+        end
+        if ((tick() - _0xBBB3) < _0x7FA1) then
+          return
+
+        end
+
+      else
+        _0xBBB3 = (4 * 0)
+
+      end
+      local _0x704D = _0x73D4.EquippedItem
+      if (not _0x704D) then
+        return
+
+      end
+      local _0x2E37 = _0x704D.ViewModel
+      local _0xE6FB = _0xDA3B(_0x2E37)
+      if (((not _0xE6FB) and _0x2E37) and _0x2E37.Name) then
+        local _0x6091 = ((_0xA63A(_0x704D.Get, _0x704D, _S[39]) and _0x704D:Get(_S[39])) or (8 * 0))
+        local _0xBD1C = ((_0xA63A(_0x704D.Get, _0x704D, _S[40]) and _0x704D:Get(_S[40])) or false)
+        if ((_0x6091 == (4 * 0)) or _0xBD1C) then
+          local _0x56EE = (8 * 0)
+          _0xA63A(          function ()
+            if _0x73D4.CurrentSlot then
+              _0x56EE = _0x73D4.CurrentSlot
+
+            end
+          end)
+          if (_0x56EE == (7 * 0 + 1)) then
+            local _0x62EA = _0x73D4:GetEquippedItem((6 * 0 + 2))
+            local _0x63FC = (((_0x62EA and _0xA63A(_0x62EA.Get, _0x62EA, _S[39])) and _0x62EA:Get(_S[39])) or (2 * 0))
+            local _0xBE7E = (((_0x62EA and _0xA63A(_0x62EA.Get, _0x62EA, _S[40])) and _0x62EA:Get(_S[40])) or false)
+            if ((_0x63FC > (2 * 0)) and (not _0xBE7E)) then
+              _0xA63A(              function ()
+                _0x73D4:EquipItem((6 * 0 + 2))
+              end)
+              return
+
+            end
+
+          elseif (_0x56EE == (6 * 0 + 2)) then
+            local _0x9BF3 = _0x73D4:GetEquippedItem((4 * 0 + 1))
+            local _0x3632 = (((_0x9BF3 and _0xA63A(_0x9BF3.Get, _0x9BF3, _S[39])) and _0x9BF3:Get(_S[39])) or (7 * 0))
+            local _0x6403 = (((_0x9BF3 and _0xA63A(_0x9BF3.Get, _0x9BF3, _S[40])) and _0x9BF3:Get(_S[40])) or false)
+            if ((_0x3632 > (4 * 0)) and (not _0x6403)) then
+              _0xA63A(              function ()
+                _0x73D4:EquipItem((4 * 0 + 1))
+              end)
+              return
+
+            end
+
+          end
+          return
+
+        end
+
+      end
+      local _0x81FC = ((_0xE6FB and (3 * 0 + 1)) or (getgenv().SecondRagebotConfig.Height or (2 * 1)))
+      local _0xFE89 = _0x704D:Get(_S[41])
+      local _0xD056 = _0x2CB3:ToEnum(_S[17])
+      local _0x75D5 = (getgenv().Config.BurstCount or (5 * 1))
+      local _0xF0A8 = _0x60FB.Remotes.Replication.Fighter.UseItem
+      if (not _0xF0A8) then
+        return
+
+      end
+      for _0x3DBE = (8 * 0 + 1), _0x75D5 do
+        if ((not _0x633D) or (not _0x6F42)) then
+          break
+
+        end
+        local _0x808F = _0x3941.Character
+        if ((not _0x808F) or (not _0x808F.Parent)) then
+          break
+
+        end
+        local _0x7ECD = _0x808F:FindFirstChildOfClass(_S[23])
+        if ((not _0x7ECD) or (_0x7ECD.Health <= (2 * 0))) then
+          break
+
+        end
+        local _0x87D5 = ((_0x808F:FindFirstChild(_S[21]) or _0x808F:FindFirstChild(_S[22])) or _0x162B)
+        local _0xE94E = (_0x5B25.Position + _0x98E7.new((5 * 0), _0x81FC, (5 * 0)))
+        _0xCBAB(_0xE94E)
+        local _0x51CD = (_0x57C3.Character and _0x57C3.Character:FindFirstChild(_S[19]))
+        local _0x44D1 = ((_0x51CD and _0x51CD.Position) or _0xE94E)
+        local _0xB628 = _0x87D5.Position
+        local _0x6265 = _0x2783.lookAt(_0x44D1, _0xB628)
+        local _0x5161 = _0x87D5.CFrame:ToObjectSpace(_0x2783.new(_0xB628))
+        local _0x6700 = {[_0xB48E.char((4 * 0 + 1))] = {[_0xB48E.char((9 * 0))] = _0x3429:EncodeCFrame(_0x6265), [_0xB48E.char((2 * 0 + 1))] = _0x3429:EncodeCFrame(_0x87D5.CFrame), [_0xB48E.char((2 * 1))] = _0x87D5, [_0xB48E.char((8 * 0 + 3))] = _0x3429:EncodeCFrame(_0x5161)}}
+        _0xA63A(        function ()
+          _0xF0A8:FireServer(_0xFE89, _0xD056, _0x6700, nil)
+        end)
+      end
+      _0x721E = tick()
+    end
+    local function _0x3C65()
+      if _0x633D then
+        return
+
+      end
+      if (not _0x6F42) then
+        return
+
+      end
+      if (tick() < _0x5419) then
+        return
+
+      end
+      local _0x73D4 = (_0x2F3A and _0x2F3A.LocalFighter)
+      if (((not _0x73D4) or (not _0x73D4.Entity)) or (not _0x73D4.Entity.RootPart)) then
+        return
+
+      end
+      _0xA980 = _0x73D4.Entity.RootPart.CFrame
+      _0xD7F6()
+      _0x633D = true
+      _0x177E = _0xD75D.Heartbeat:Connect(      function (_0x98CE)
+        if (((((not getgenv().Config.Enabled) or (not _0x3941)) or (not _0x5B25)) or (not _0x162B)) or (not _0x6F42)) then
+          _0x59EC()
+          return
+
+        end
+        local _0xBE16 = (_0x2F3A and _0x2F3A.LocalFighter)
+        if (((not _0xBE16) or (not _0xBE16.Entity)) or (not _0xBE16.Entity.RootPart)) then
+          _0x59EC()
+          return
+
+        end
+        local _0x3A1F = _0x3941.Character
+        if ((not _0x3A1F) or (not _0x3A1F.Parent)) then
+          _0x59EC()
+          return
+
+        end
+        local _0x994C = _0x3A1F:FindFirstChildOfClass(_S[23])
+        if ((not _0x994C) or (_0x994C.Health <= (5 * 0))) then
+          _0x59EC()
+          return
+
+        end
+        if _0x3941 then
+          local _0x0165 = _0x994C.Health
+          if (_0x5BAB > (4 * 0)) then
+            local _0x6CE5 = (_0x5BAB - _0x0165)
+            if (_0x6CE5 > (2 * 0)) then
+              _0x40D1 = (_0x40D1 + _0x6CE5)
+
+            end
+
+          end
+          _0x5BAB = _0x0165
+
+        end
+        local _0x704D = _0xBE16.EquippedItem
+        local _0xE6FB = (_0x704D and _0xDA3B(_0x704D.ViewModel))
+        local _0xF1AF = getgenv().SecondRagebotConfig
+        local _0x3D70 = ((_0xE6FB and (7 * 0 + 1)) or (_0xF1AF.Height or (6 * 0 + 2)))
+        local _0xA0AF = (_0xF1AF.Radius or (7 * 0))
+        local _0x4C99 = (_0xF1AF.Speed or (9 * 44 + 4))
+        local _0xD932 = (_0xF1AF.SpinSpeed or (6 * 66 + 4))
+        _0x4B04 = (_0x4B04 + (_0x4C99 * _0x98CE))
+        local _0x654D = (_0x7064.rad(_0xD932) * _0x98CE)
+        local _0x4C28 = _0x98E7.new((_0x7064.cos(_0x4B04) * _0xA0AF), _0x3D70, (_0x7064.sin(_0x4B04) * _0xA0AF))
+        _0xCBAB((_0x5B25.Position + _0x4C28))
+      end)
+      _0x1E76 = _0xD75D.Heartbeat:Connect(      function ()
+        if ((not _0x633D) or (not _0x6F42)) then
+          return
+
+        end
+        if (tick() < _0x5419) then
+          return
+
+        end
+        _0xA63A(_0x13F2)
+      end)
+    end
+    _0xD75D.Heartbeat:Connect(    function ()
+      if (not getgenv().Config.Enabled) then
+        return
+
+      end
+      local _0x49BC, _0x4409, _0xC307 = _0xB262()
+      local _0xB3C2 = (5 * 0)
+      local _0xD690 = _0x57C3.Character
+      if _0xD690 then
+        local _0x1E5F = _0xD690:FindFirstChildOfClass(_S[23])
+        if _0x1E5F then
+          _0xB3C2 = _0x1E5F.Health
+
+        end
+
+      end
+      if (_0xB3C2 < _0x7A87) then
+        _0x5419 = (tick() + _0x2DC3)
+        if _0x633D then
+          _0x59EC()
+
+        end
+
+      end
+      _0x7A87 = _0xB3C2
+      if ((_0x49BC and _0x4409) and _0xC307) then
+        if (_0x49BC ~= _0x3941) then
+          _0x5BAB = (5 * 0)
+
+        end
+        _0x3941 = _0x49BC
+        _0x5B25 = _0x4409
+        _0x162B = _0xC307
+        if ((_0x6F42 and (not _0x633D)) and (tick() >= _0x5419)) then
+          _0x3C65()
+
+        end
+
+      else
+        if _0x633D then
+          _0x59EC()
+
+        end
+        _0x3941 = nil
+        _0x5B25 = nil
+        _0x162B = nil
+        _0xBBB3 = (8 * 0)
+        _0x5BAB = (5 * 0)
+
+      end
+    end)
+    _0x57C3.CharacterAdded:Connect(    function ()
+      _0x0894.wait(0.5)
+      _0x59EC()
+      _0x3941 = nil
+      _0x5B25 = nil
+      _0x162B = nil
+      _0xBBB3 = (7 * 0)
+      _0x5BAB = (8 * 0)
+      _0x40D1 = (3 * 0)
+      _0x6F42 = false
+      _0x5419 = (7 * 0)
+      _0x7A87 = (8 * 12 + 4)
+    end)
+    _0x0894.spawn(    function ()
+      while true do
+        _0x0894.wait(0.3)
+        local _0x58F0 = _0x57C3:FindFirstChildOfClass(_S[42])
+        if _0x58F0 then
+          for _0x3A1F, _0x25BB in _0xCC5B(_0x58F0:GetDescendants()) do
+            if (_0x25BB:IsA(_S[43]) and _0x25BB.Visible) then
+              local _0x4F47 = _0x25BB.Text
+              if (_0x4F47 and _0x4F47:match(_S[44])) then
+                local _0x925C = {}
+                for _0x0BE0 in _0x4F47:gmatch(_S[45]) do
+                  _0x790A.insert(_0x925C, _0x6279(_0x0BE0))
+                end
+                if (#_0x925C == (5 * 0 + 2)) then
+                  local _0x9922 = ((_0x925C[(8 * 0 + 1)] * (2 * 30)) + _0x925C[(5 * 0 + 2)])
+                  if (_0x9922 == (7 * 12 + 5)) then
+                    if (not _0x6F42) then
+                      _0x6F42 = true
+                      if ((((_0x3941 and _0x5B25) and _0x162B) and (tick() >= _0x5419)) and (not _0x633D)) then
+                        _0x3C65()
+
+                      end
+
+                    end
+
+                  elseif (_0x9922 > (6 * 14 + 5)) then
+                    _0x6F42 = false
+                    if _0x633D then
+                      _0x59EC()
+
+                    end
+
+                  end
+
+                end
+
+              end
+
+            end
+          end
+
+        end
+      end
+    end)
+    local _0x84FF = false
+    local _0x4282 = nil
+    local function _0x35BB(_0xFF58)
+      if (not _0xFF58) then
+        return false
+
+      end
+      local _0x3F45 = _0xFF58
+      while _0x3F45 do
+        if (_0x3F45:IsA(_S[46]) and (not _0x3F45.Visible)) then
+          return false
+
+        end
+        _0x3F45 = _0x3F45.Parent
+      end
+      return true
+    end
+    local function _0x848A()
+      local _0x58F0 = _0x57C3:FindFirstChildOfClass(_S[42])
+      if (not _0x58F0) then
+        return nil
+
+      end
+      for _0x3A1F, _0x1C82 in _0xCC5B(_0x58F0:GetDescendants()) do
+        if (_0x1C82:IsA(_S[47]) or _0x1C82:IsA(_S[48])) then
+          local _0x5FEA = _S[16]
+          if (_0x1C82:FindFirstChild(_S[49]) and _0x1C82.Title:IsA(_S[43])) then
+            _0x5FEA = _0x1C82.Title.Text
+
+          elseif _0x1C82:IsA(_S[48]) then
+            _0x5FEA = _0x1C82.Text
+
+          end
+          if (_0x5FEA and ((((_0x5FEA:lower():find(_S[50]) or _0x5FEA:lower():find(_S[51])) or _0x5FEA:lower():find(_S[52])) or _0x5FEA:lower():find(_S[53])) or _0x5FEA:lower():find(_S[54]))) then
+            local _0x2EC0 = _0x1C82.AbsolutePosition
+            local _0x7313 = _0x1C82.AbsoluteSize
+            if ((_0x35BB(_0x1C82) and (_0x7313.X > (3 * 0))) and (_0x7313.Y > (2 * 0))) then
+              return _0x1C82, (_0x2EC0.X + (_0x7313.X / (7 * 0 + 2))), ((_0x2EC0.Y + _0xBE39:GetGuiInset().Y) + (_0x7313.Y / (8 * 0 + 2)))
+
+            end
+
+          end
+
+        end
+      end
+      return nil
+    end
+    local function _0x6B74(_0xF3E8, _0x04FB)
+      _0xA63A(      function ()
+        local _0x00FD = _0xFF53.new(_S[55])
+        _0x00FD:SendMouseButtonEvent(_0xF3E8, _0x04FB, (3 * 0), true, _0x1A89, (7 * 0 + 1))
+        _0x00FD:SendMouseButtonEvent(_0xF3E8, _0x04FB, (5 * 0), false, _0x1A89, (6 * 0 + 1))
+      end)
+    end
+    local function _0xECCF()
+      if _0x84FF then
+        return
+
+      end
+      _0x84FF = true
+      _0x4282 = _0x0894.spawn(      function ()
+        while _0x84FF do
+          local _0x6FBE, _0xCA60, _0x70F4 = _0x848A()
+          if _0x6FBE then
+            _0x6B74(_0xCA60, _0x70F4)
+
+          else
+            local _0xE3B4 = _0xAFC9.ViewportSize
+            _0x6B74((_0xE3B4.X - (3 * 16 + 2)), (_0xE3B4.Y - (9 * 5 + 5)))
+
+          end
+          _0x0894.wait(0.05)
+        end
+      end)
+    end
+    local function _0xA8B6()
+      _0x84FF = false
+      if _0x4282 then
+        _0x0894.cancel(_0x4282)
+
+      end
+      _0x4282 = nil
+    end
+    local _0xF5AE, _0xA5F3 = (3 * 0), (2 * 0)
+    local function _0xDB2A()
+      local _0x802D = _0x57C3:FindFirstChildOfClass(_S[42])
+      if (not _0x802D) then
+        return nil
+
+      end
+      for _0x3A1F, _0xFF6A in _0xCC5B(_0x802D:GetDescendants()) do
+        if (((_0xFF6A:IsA(_S[43]) or _0xFF6A:IsA(_S[48])) or _0xFF6A:IsA(_S[56])) and _0xFF6A.Visible) then
+          local _0x32D2 = _0xFF6A.Text
+          if ((_0x32D2 and (_0xA5D8(_0x32D2) == _S[57])) and (#_0x32D2 <= (9 * 1 + 6))) then
+            local _0x674E, _0x9F2C = _0x32D2:match(_S[58])
+            if (_0x674E and _0x9F2C) then
+              local _0xE6D0, _0xA8A2 = _0x6279(_0x674E), _0x6279(_0x9F2C)
+              if (((_0xE6D0 and _0xA8A2) and (_0xE6D0 < (5 * 20))) and (_0xA8A2 < (6 * 16 + 4))) then
+                return _0xE6D0, _0xA8A2
+
+              end
+
+            end
+
+          end
+
+        end
+      end
+      return nil
+    end
+    _0x0894.spawn(    function ()
+      while true do
+        _0x0894.wait(0.4)
+        local _0x674E, _0x9F2C = _0xDB2A()
+        if (_0x674E and _0x9F2C) then
+          _0xF5AE = _0x674E
+          _0xA5F3 = _0x9F2C
+
+        end
+      end
+    end)
+    if getgenv().Config.AutoQueue then
+      _0x0894.spawn(      function ()
+        local _0x57D8 = _0x1A89:GetService(_S[59])
+        local function _0x5988()
+          local _0x316C = {}
+          for _0x3A1F, _0x28CE in _0xCC5B(_0x57D8:GetTagged(_S[60])) do
+            local _0x415D = _0x28CE:GetAttribute(_S[61])
+            if (_0x415D and (_0x415D ~= _S[16])) then
+              _0x316C[_0x415D] = true
+
+            end
+          end
+          local _0x8248 = {}
+          for _0x331F in _0x34E8(_0x316C) do
+            _0x790A.insert(_0x8248, _0x331F)
+          end
+          _0x790A.sort(_0x8248)
+          if (#_0x8248 == (8 * 0)) then
+            return
+
+          end
+          local _0x98F6
+          for _0x3A1F, _0x84D1 in _0xCC5B(_0x8248) do
+            local _0xDF43 = _0x84D1:lower()
+            if ((_0xDF43:find(_S[62]) or _0xDF43:find(_S[63])) or _0xDF43:find(_S[64])) then
+              _0x98F6 = _0x84D1
+              break
+
+            end
+          end
+          _0x98F6 = (_0x98F6 or _0x8248[(2 * 0 + 1)])
+          local _0xF00E = _0x60FB:FindFirstChild(_S[65])
+          local _0xDE2B = (_0xF00E and _0xF00E:FindFirstChild(_S[66]))
+          local _0x3222 = (_0xDE2B and _0xDE2B:FindFirstChild(_S[67]))
+          if (_0x3222 and _0x3222:IsA(_S[68])) then
+            _0xA63A(            function ()
+              _0x3222:InvokeServer(_0x98F6)
+            end)
+
+          end
+        end
+        local function _0x9AB6()
+          _0xECCF()
+          _0x0894.spawn(          function ()
+            for _0x3A1F = (7 * 0 + 1), (7 * 2 + 6) do
+              _0x5988()
+              _0x0894.wait(0.5)
+              local _0xBA5C = _0xD1B9:GetAttribute(_S[69])
+              if ((_0xBA5C == _S[70]) or (_0xBA5C == _S[71])) then
+                _0xA8B6()
+                return
+
+              end
+            end
+          end)
+        end
+        _0x0894.spawn(        function ()
+          while true do
+            _0x0894.wait((5 * 0 + 2))
+            local _0xBA5C = _0xD1B9:GetAttribute(_S[69])
+            local _0x8F61 = _0xD1B9:GetAttribute(_S[72])
+            if (((_0x8F61 == true) or (_0xBA5C == nil)) or ((_0xBA5C ~= _S[70]) and (_0xBA5C ~= _S[71]))) then
+              _0x5988()
+
+            end
+            if (_0xBA5C == _S[70]) then
+              _0xA8B6()
+
+            end
+          end
+        end)
+        _0xD1B9:GetAttributeChangedSignal(_S[72]):Connect(        function ()
+          if (_0xD1B9:GetAttribute(_S[72]) == true) then
+            _0x0894.wait((8 * 0 + 1))
+            _0x9AB6()
+
+          end
+        end)
+        _0xD1B9:GetAttributeChangedSignal(_S[69]):Connect(        function ()
+          local _0xBA5C = _0xD1B9:GetAttribute(_S[69])
+          if ((_0xBA5C ~= _S[70]) and (_0xD1B9:GetAttribute(_S[72]) ~= true)) then
+            _0x5988()
+
+          end
+        end)
+        _0x0894.wait((9 * 0 + 3))
+        _0x5988()
+      end)
+
+    end
+    local function _0xAFB1()
+      local _0x28F9, _0x2741 = _0xA63A(      function ()
+        return (gethui and gethui())
+      end)
+      if (_0x28F9 and _0x2741) then
+        return _0x2741
+
+      end
+      local _0x2BCF, _0xA580 = _0xA63A(      function ()
+        return CoreGui
+      end)
+      if (_0x2BCF and _0xA580) then
+        return _0xA580
+
+      end
+      return _0x57C3:WaitForChild(_S[42], (9 * 1 + 1))
+    end
+    local _0xF06D = _0xAFB1()
+    local _0xF3EC = _0xFF53.new(_S[73])
+    _0xF3EC.Name = _S[74]
+    _0xF3EC.ResetOnSpawn = false
+    _0xA63A(    function ()
+      _0xF3EC.Parent = _0xF06D
+    end)
+    if (not _0xF3EC.Parent) then
+      _0xA63A(      function ()
+        _0xF3EC.Parent = _0x57C3:WaitForChild(_S[42], (4 * 1 + 1))
+      end)
+
+    end
+    _0xA63A(    function ()
+      if (syn and syn.protect_gui) then
+        syn.protect_gui(_0xF3EC)
+
+      end
+    end)
+    _0xA63A(    function ()
+      if protect_gui then
+        protect_gui(_0xF3EC)
+
+      end
+    end)
+    local _0x0692 = _0xFF53.new(_S[75])
+    _0x0692.Size = _0xBCCF.new((6 * 0), (6 * 53 + 2), (9 * 0), (5 * 54))
+    _0x0692.Position = _0xBCCF.new((3 * 0), (5 * 2), (2 * 0), (3 * 3 + 1))
+    _0x0692.BackgroundColor3 = _0x9611.fromRGB((4 * 0), (3 * 0), (3 * 0))
+    _0x0692.BackgroundTransparency = 0.6
+    _0x0692.BorderSizePixel = (7 * 0)
+    _0x0692.Parent = _0xF3EC
+    _0xFF53.new(_S[76]).Parent = _0x0692
+    local _0x7AB6 = _0xFF53.new(_S[43])
+    _0x7AB6.Size = _0xBCCF.new((6 * 0 + 1), (-(7 * 1 + 3)), (4 * 0), (3 * 6 + 2))
+    _0x7AB6.Position = _0xBCCF.new((3 * 0), (3 * 1 + 2), (2 * 0), (8 * 0 + 5))
+    _0x7AB6.BackgroundTransparency = (7 * 0 + 1)
+    _0x7AB6.Text = _S[77]
+    _0x7AB6.TextColor3 = _0x9611.fromRGB((4 * 63 + 3), (6 * 42 + 3), (7 * 36 + 3))
+    _0x7AB6.TextXAlignment = _0x9377.TextXAlignment.Left
+    _0x7AB6.TextSize = (7 * 2 + 2)
+    _0x7AB6.Font = _0x9377.Font.GothamBold
+    _0x7AB6.Parent = _0x0692
+    local _0xE872 = _0xFF53.new(_S[43])
+    _0xE872.Size = _0xBCCF.new((5 * 0 + 1), (-(3 * 3 + 1)), (6 * 0), (4 * 4))
+    _0xE872.Position = _0xBCCF.new((5 * 0), (4 * 1 + 1), (4 * 0), (2 * 13))
+    _0xE872.BackgroundTransparency = (2 * 0 + 1)
+    _0xE872.Text = _S[78]
+    _0xE872.TextColor3 = _0x9611.fromRGB((3 * 60), (6 * 30), (4 * 50))
+    _0xE872.TextXAlignment = _0x9377.TextXAlignment.Left
+    _0xE872.TextSize = (6 * 2)
+    _0xE872.Font = _0x9377.Font.Gotham
+    _0xE872.Parent = _0x0692
+    local _0x3693 = _0xFF53.new(_S[43])
+    _0x3693.Size = _0xBCCF.new((7 * 0 + 1), (-(5 * 2)), (4 * 0 + 1), (-(8 * 6)))
+    _0x3693.Position = _0xBCCF.new((3 * 0), (7 * 0 + 5), (6 * 0), (6 * 7 + 2))
+    _0x3693.BackgroundTransparency = (7 * 0 + 1)
+    _0x3693.Text = _S[79]
+    _0x3693.TextColor3 = _0x9611.fromRGB((9 * 28 + 3), (2 * 127 + 1), (5 * 51))
+    _0x3693.TextXAlignment = _0x9377.TextXAlignment.Left
+    _0x3693.TextYAlignment = _0x9377.TextYAlignment.Top
+    _0x3693.TextSize = (6 * 2 + 1)
+    _0x3693.Font = _0x9377.Font.Gotham
+    _0x3693.TextWrapped = true
+    _0x3693.Parent = _0x0692
+    local function _0x45A9()
+      local _0x73D4 = (_0x2F3A and _0x2F3A.LocalFighter)
+      if ((not _0x73D4) or (not _0x73D4.EquippedItem)) then
+        return nil, (5 * 0), (2 * 0), false
+
+      end
+      local _0x2CC2 = _0x73D4.EquippedItem
+      local _0xFB02 = ((_0xA63A(_0x2CC2.Get, _0x2CC2, _S[80]) and _0x2CC2:Get(_S[80])) or _S[81])
+      local _0x309D = ((_0xA63A(_0x2CC2.Get, _0x2CC2, _S[39]) and _0x2CC2:Get(_S[39])) or (7 * 0))
+      local _0xB9A1 = ((_0xA63A(_0x2CC2.Get, _0x2CC2, _S[82]) and _0x2CC2:Get(_S[82])) or _0x309D)
+      local _0xC7FD = ((_0xA63A(_0x2CC2.Get, _0x2CC2, _S[40]) and _0x2CC2:Get(_S[40])) or false)
+      return _0xFB02, _0x309D, _0xB9A1, _0xC7FD
+    end
+    _0x0894.spawn(    function ()
+      while true do
+        _0x0894.wait(0.3)
+        _0xA63A(        function ()
+          local _0x4092 = (2 * 0)
+          local _0x62F3 = _0x57C3.Character
+          if _0x62F3 then
+            local _0x4305 = _0x62F3:FindFirstChildOfClass(_S[23])
+            if _0x4305 then
+              _0x4092 = _0x7064.floor(_0x4305.Health)
+
+            end
+
+          end
+          local _0x48DF = (6 * 0)
+          local _0x411C = _S[83]
+          if (_0x3941 and _0x3941.Character) then
+            local _0xE9D8 = _0x3941.Character:FindFirstChildOfClass(_S[23])
+            if (_0xE9D8 and (_0xE9D8.Health > (7 * 0))) then
+              _0x48DF = _0x7064.floor(_0xE9D8.Health)
+              _0x411C = (_0x3941.DisplayName or _0x3941.Name)
+
+            end
+
+          end
+          local _0x52BD, _0x2F13, _0x55AD, _0xD6CD = _0x45A9()
+          local _0x73D4 = (_0x2F3A and _0x2F3A.LocalFighter)
+          local _0xA0FD = _S[84]
+          if ((_0x73D4 and _0x73D4.EquippedItem) and _0x73D4.EquippedItem.ViewModel) then
+            if _0xDA3B(_0x73D4.EquippedItem.ViewModel) then
+              _0xA0FD = _S[85]
+
+            end
+
+          end
+          local _0xE447 = _S[86]
+          local _0x509D = (_0x57C3.Character and _0x57C3.Character:FindFirstChild(_S[19]))
+          if (_0x509D and _0x5B25) then
+            _0xE447 = _0xDF36.format(_S[87], (_0x509D.Position - _0x5B25.Position).Magnitude)
+
+          end
+          _0x3693.Text = _0xDF36.format(_S[88], _0x4092, _0x411C, _0x48DF, _0x40D1, _0xA0FD, (_0x52BD or _S[83]), (_0x2F13 or (6 * 0)), (_0x55AD or (7 * 0)), ((_0xD6CD and _S[89]) or _S[16]), ((_0xBC3C and _S[90]) or _S[91]), ((_0x6F42 and _S[92]) or _S[93]), _0xE447, _0xF5AE, _0xA5F3)
+        end)
+      end
+    end)
+
+  end
+end
